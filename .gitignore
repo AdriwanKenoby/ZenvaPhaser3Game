@@ -1,0 +1,5 @@
+node_modules/
+defs/
+public/build/
+package-lock.json
+jsconfig.json
