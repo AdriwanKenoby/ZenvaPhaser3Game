@@ -63,11 +63,11 @@ class Spawner {
   }
 
   pickRandomLocation () {
-    let location = this.spwanLocations[Math.floor(Math.random() * this.spwanLocations.length)]
-
-    while (this.objectsCreated.some(obj => (obj.x === location[0] && obj.y === location[1]))) {
+    let location
+    do {
       location = this.spwanLocations[Math.floor(Math.random() * this.spwanLocations.length)]
     }
+    while (this.objectsCreated.some(obj => (obj.x === location[0] && obj.y === location[1])))
 
     return location
   }

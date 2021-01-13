@@ -19,4 +19,13 @@ const config = {
   roundPixels: true
 }
 
-const game = new Phaser.Game(config)
+class Game extends Phaser.Game {
+  constructor () {
+    super(config)
+    this.scene.start('Boot')
+  }
+}
+
+window.onload = () => {
+  window.game = new Game()
+}
